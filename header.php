@@ -25,33 +25,29 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'icyf' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$icyf_description = get_bloginfo( 'description', 'display' );
-			if ( $icyf_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $icyf_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+
+		<div id="logo" class="mobile-logo">
+			<a href=""><img src="http://icyfhost/wp-content/uploads/2018/10/markinglogo.png" width="40"/></a>
+
+		</div>
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'icyf' ); ?></button>
+			<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'icyf' ); ?></button> -->
 			<?php
+			$divider_html = '<a href=""><img src="http://icyfhost/wp-content/uploads/2018/10/markinglogo.png" width="40"/></a>';
+
 			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
+				'menu-1' => 1,
+				'depth' => 1,
+				'container' => False,
+				'divider_html' => $divider_html,
+				'divider_offset' => -2
+				// 'theme_location' => 'menu-1',
+				// 'menu_id'        => 'primary-menu',
+				// 'divider_html' => $divider_html,
 			) );
 			?>
+			<a class="toggle-nav" href="#">&#9776;</a>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

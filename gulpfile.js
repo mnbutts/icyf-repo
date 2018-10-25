@@ -6,10 +6,11 @@
 
 // Include necessary modules
 var gulp = require('gulp'),
+        sourcemaps = require('gulp-sourcemaps'),
+        autoprefixer = require('gulp-autoprefixer'),
         browserSync = require('browser-sync'),
         rename = require('gulp-rename'),
-        sass = require('gulp-sass'),
-        autoprefixer = require('gulp-autoprefixer');
+        sass = require('gulp-sass');
 
 var styleSRC = './sass/style.scss';
 var styleDIST = './css/';
@@ -18,7 +19,7 @@ var styleDIST = './css/';
 //Configure Browsersync.
 gulp.task('browser-sync', function() {
     var files = [
-        './style.css',
+        './style.scss',
         './*.php'
     ];
 
@@ -42,6 +43,7 @@ gulp.task('sass', function() {
 //testing autoprefixer (not original)
 gulp.task('style', function(){
     gulp.src( styleSRC )
+          .pipe( sourcemaps.init())
           .pipe(sass({
             errorLogToConsole: true,
               'outputStyle': 'compressed'
@@ -51,7 +53,8 @@ gulp.task('style', function(){
                 browsers: ['last 2 versions'],
                 cascade: false
             }))
-            .pipe( rename( { suffix: 'min'}))
+            .pipe( rename( { suffix: '.min'}))
+            .pipe( sourcemaps.write('./'))
             .pipe(gulp.dest( styleDIST ));
 });
 
