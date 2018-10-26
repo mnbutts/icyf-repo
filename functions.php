@@ -132,8 +132,8 @@ add_action( 'widgets_init', 'icyf_widgets_init' );
  * Enqueue scripts and styles.
  */
 function icyf_scripts() {
-        // Enqueue Google Fonts:  Pacifico and PT Sans
-        wp_enqueue_style( 'icyf-fonts', 'https://fonts.googleapis.com/css?family=Oxygen:300,400,700|Pacifico');
+    // Enqueue Google Fonts:  Pacifico and PT Sans
+    wp_enqueue_style( 'icyf-fonts', 'https://fonts.googleapis.com/css?family=Oxygen:300,400,700|Pacifico');
 	wp_enqueue_style( 'icyf-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'icyf-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );

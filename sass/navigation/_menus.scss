@@ -1,13 +1,13 @@
 .main-navigation {
 	text-align: center;
 	position: relative;
-	// border: 1px solid red;
-	width: 100%;
 }
 .main-navigation ul {
 	display: inline-block;
 	margin-top: 10px;
 	margin-left: 0px;
+	margin-bottom: 0px;
+	z-index: 100000;
 }
 .main-navigation li {
 	display: block;
@@ -29,9 +29,10 @@
 .main-navigation ul li:nth-child(3),
 .main-navigation ul li:nth-child(4),
 .main-navigation ul li:nth-child(5) {
-  // padding-top: 13px;
+  padding-top: 13px;
 	padding-left: 40px;
 	padding-right: 40px;
+	padding-bottom: 20px;
 }
 .main-navigation a {
 	color: #000000;
@@ -48,12 +49,10 @@
 .toggle-nav {
 	display: none;
 }
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: $query__medium) {
 	//For tablets
 	.main-navigation li a {
 		font-size: 16px;
-		// padding: 0px !important;
-
 	}
 	.main-navigation ul li:nth-child(3) {
 		margin-left: 300px;
@@ -64,12 +63,10 @@
 	.main-navigation ul li:nth-child(5) {
 	  // padding-top: 13px;
 		padding: 20px 20px 0px 20px;
-
-
 	}
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: $query__small) {
 //For small screens ie phones
 	#site-navigation {
 		width: 100%;
