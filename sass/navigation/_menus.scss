@@ -49,6 +49,74 @@
 .toggle-nav {
 	display: none;
 }
+@media screen and (max-width: 1384px) {
+	.main-navigation ul li:nth-child(2),
+	.main-navigation ul li:nth-child(3),
+	.main-navigation ul li:nth-child(4),
+	.main-navigation ul li:nth-child(5) {
+	  // padding-top: 13px;
+		padding-left: 20px;
+	}
+}
+@media screen and (max-width: 1343px) {
+	.main-navigation ul li:nth-child(2),
+	.main-navigation ul li:nth-child(3),
+	.main-navigation ul li:nth-child(4),
+	.main-navigation ul li:nth-child(5) {
+	  // padding-top: 13px;
+		padding-left: 20px;
+	}
+}
+@media screen and (max-width: 1294px) {
+	.main-navigation ul li:nth-child(2),
+	.main-navigation ul li:nth-child(3),
+	.main-navigation ul li:nth-child(4),
+	.main-navigation ul li:nth-child(5) {
+	  // padding-top: 13px;
+		font-size: 17px;
+	}
+}
+@media screen and (max-width: 1284px) {
+	.main-navigation ul li:nth-child(2),
+	.main-navigation ul li:nth-child(3),
+	.main-navigation ul li:nth-child(4),
+	.main-navigation ul li:nth-child(5) {
+	  // padding-top: 13px;
+		padding-left: 5px;
+	}
+}
+@media screen and (max-width: 1240px) {
+	.main-navigation ul li:nth-child(2),
+	.main-navigation ul li:nth-child(3),
+	.main-navigation ul li:nth-child(4),
+	.main-navigation ul li:nth-child(5) {
+	  // padding-top: 13px;
+		font-size: 16px;
+	}
+}
+@media screen and (max-width: 1148px) {
+	.main-navigation ul li:nth-child(2),
+	.main-navigation ul li:nth-child(3),
+	.main-navigation ul li:nth-child(4),
+	.main-navigation ul li:nth-child(5) {
+	  // padding-top: 13px;
+		font-size: 16px;
+		padding-left: 0px;
+	}
+}
+@media screen and (max-width: 1130px) {
+	.main-navigation ul li:nth-child(2),
+	.main-navigation ul li:nth-child(3),
+	.main-navigation ul li:nth-child(4),
+	.main-navigation ul li:nth-child(5) {
+	  // padding-top: 13px;
+		font-size: 16px;
+		padding-left: 0px;
+	}
+	.main-navigation ul li:nth-child(3) {
+		margin-left: 400px;
+	}
+}
 @media screen and (max-width: $query__medium) {
 	//For tablets
 	.main-navigation li a {
@@ -65,7 +133,6 @@
 		padding: 20px 20px 0px 20px;
 	}
 }
-
 @media screen and (max-width: $query__small) {
 //For small screens ie phones
 	#site-navigation {
