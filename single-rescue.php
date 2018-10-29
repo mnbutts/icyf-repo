@@ -12,8 +12,8 @@
   <h2><?php the_title(); ?></h2>
    <p><?php the_field('tagline'); ?></p>
   </div>
-  <div class="story-container-lt img-left">
-    <div class="thep"> <?php the_field('introduction'); ?></div>
+  <div class="story-container img-left">
+    <?php the_field('introduction'); ?>
     <div class="storyimg"><?php
       $image = get_field('character_image');
       $size = 'full'; // (thumbnail, medium, large, full or custom size)
@@ -36,11 +36,11 @@
 
       }
      ?></div>
-    <div class="thep"> <?php the_field('stats'); ?> </div>
+    <?php the_field('stats'); ?>
   </div>
 
-  <div class="story-container-lt img-left">
-    <div class="thep"><?php the_field('call_to_action'); ?></div>
+  <div class="story-container img-left">
+      <?php the_field('call_to_action'); ?>
       <div class="storyimg"><?php
       $image = get_field('action_image');
       $size = 'full'; // (thumbnail, medium, large, full or custom size)
@@ -63,7 +63,7 @@
 
       }
      ?></div>
-      <div class="thep"> <?php the_field('contact'); ?> </div>
+    <?php the_field('contact'); ?>
   </div>
    </main><!-- #main -->
  </div><!-- #primary -->

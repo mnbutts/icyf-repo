@@ -12,7 +12,10 @@
 
       <?php
       get_template_part( 'template-parts/content', 'jumbotron' );
+      get_template_part( 'template-parts/content', 'feature' );
       ?>
+
+
 
  		</main><!-- #main -->
  	</div><!-- #primary -->

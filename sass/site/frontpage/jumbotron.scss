@@ -3,7 +3,7 @@
   margin: 0px;
   position: relative;
   height: 350px;
-
+  background-color: $color__blue;
   h1 {
     color: $color__white;
   }
@@ -16,7 +16,7 @@
   color: $color__white;
 }
 .jlayer {
-  background-color: rgba(0,0,0,.5);
+  // background-color: rgba(0,0,0,.5);
   position: absolute;
   top: 0;
   left: 0;

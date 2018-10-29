@@ -9,6 +9,11 @@
 
  	<div id="primary" class="content-area rescuecontent">
  		<main id="main" class="site-main">
+
+      <header class="entry-header">
+    		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+    	</header><!-- .entry-header -->
+      
       <?php
           $args = array(
             'post_type' => 'rescue'

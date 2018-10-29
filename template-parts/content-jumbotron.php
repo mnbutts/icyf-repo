@@ -2,7 +2,7 @@
 
 <?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'contain' );?>
 
-<div class="jumbotron" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat center center fixed;">
+<div class="jumbotron">
   <div class="jlayer">
     <p>&nbsp;</P>
   <h1 class="display-4"><?php the_title(); ?></h1>
