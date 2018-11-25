@@ -2,21 +2,21 @@
   margin: 0px 0px 0px 0px;
   padding: 0 !important;
   position: relative;
-  height: 350px;
-  width: 100%;
+  border-radius: 0%;
+  height: 550px;
   background-color: $color__blue;
-  h1 {
-    color:  $color__black;
-  }
+  margin-bottom: -10vh;
   p {
-    color: $color__black;
+    color: $color__white;
   }
 }
-.jumbotron .btn {
-  color: $color__white;
-  border: none;
-}
+// .jumbotron .btn {
+//   color: $color__white;
+//   border: none;
+// }
 .jlayer {
+  // vertical-align: top;
+  border: 1px solid red;
   position: absolute;
   top: 0;
   left: 0;
@@ -24,14 +24,16 @@
   bottom: 0;
   width: 100%;
   height: 100%;
-  padding-left: 40px;
-  padding-right: 40px;
-  h1 {
-    text-align: left;
+  // padding-left: 40px;
+  // padding-right: 40px;
+  p {
+    font-size: 3em;
+    line-height: 1.3em;
+    // display: inline-block;
   }
 }
-hr {
-  // background-color: transparent;
+.twisted {
+  font-family: $font__hsans;
 }
 @media screen and (max-width: $query__xsmall) {
   .jumbotron {

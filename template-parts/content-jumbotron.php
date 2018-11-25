@@ -4,9 +4,8 @@
 
 <div class="jumbotron">
   <div class="jlayer">
-    <p>&nbsp;</P>
-    <p><?php the_content(); ?></p>
-  <a class="" href="#" role="button">Learn more</a>
+    <!-- <p>&nbsp;</P> -->
+    <p class="the_quote"><?php the_content(); ?></p>
   </div>
 </div>
 
