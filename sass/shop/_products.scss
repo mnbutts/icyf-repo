@@ -5,6 +5,8 @@ ul.products {
 	@include clearfix;
 	margin: 0;
 	padding: 0;
+	// width: 100%;
+	border: 1px solid red;
 
 	li.product {
 		list-style: none;
@@ -17,6 +19,7 @@ ul.products {
 
 		img {
 			display: block;
+			border: 1px solid red;
 		}
 
 		.button {
@@ -42,7 +45,8 @@ ul.products {
 		}
 	}
 
-	.columns-1 {
+	.columns-1,
+	.columns-3 {
 		ul.products {
 			li.product {
 				float: none;

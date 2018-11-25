@@ -14,7 +14,17 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
+	<aside class="fatfooter" role="complementary">
+		<div class="first full-width widget-area">
+			<?php
+			if(is_active_sidebar('first-footer-widget-area')){
+			dynamic_sidebar('first-footer-widget-area');
+			}
+			?>
+		</div>
+	</aside>
+
+		<!-- <div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'icyf' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */

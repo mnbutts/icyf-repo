@@ -28,28 +28,30 @@
 	<header id="masthead" class="site-header">
 
 		<div id="logo" class="mobile-logo">
-			<a href=""><img src="http://icyfhost/wp-content/uploads/2018/10/markinglogo.png" width="40"/></a>
-
+			<a href="http://icyfhost/"><img src="http://icyfhost/wp-content/uploads/2018/10/markinglogo.png" width="40"/></a>
 		</div>
-
-		<nav id="site-navigation" class="main-navigation">
-			<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'icyf' ); ?></button> -->
+<div id="site-header-menu" class="site-header-menu">
+		<nav id="site-navigation" class="main-navigation" role"navigation">
+			<button id="menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( '&#9776;', 'icyf' ); ?></button>
 			<?php
-			$divider_html = '<a href=""><img src="http://icyfhost/wp-content/uploads/2018/10/markinglogo.png" width="40"/></a>';
+			$divider_html = '<a href="http://icyfhost/"><img src="http://icyfhost/wp-content/uploads/2018/10/markinglogo.png" width="40"/></a>';
 
 			wp_nav_menu( array(
-				'menu-1' => 1,
-				'depth' => 1,
-				'container' => False,
-				'divider_html' => $divider_html,
-				'divider_offset' => -2
+				'theme_location' => 'menu-1',
+				'menu_id'        => 'primary-menu',
+				// 'depth' => 1,
+				// 'container' => False,
+				// 'divider_html' => $divider_html,
+				// 'divider_offset' => -1
+
 				// 'theme_location' => 'menu-1',
 				// 'menu_id'        => 'primary-menu',
 				// 'divider_html' => $divider_html,
 			) );
 			?>
-			<a class="toggle-nav" href="#">&#9776;</a>
+			<!-- <a class="toggle-nav" href="#">&#9776;</a> -->
 		</nav><!-- #site-navigation -->
+	</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

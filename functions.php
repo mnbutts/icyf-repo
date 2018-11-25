@@ -91,6 +91,7 @@ add_action( 'after_setup_theme', 'icyf_setup' );
  * @global int $content_width
  */
 
+
  /**
  * Enable burger menu
  */
@@ -125,6 +126,27 @@ function icyf_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name' => __( 'First Footer Widget Area', 'icyf' ),
+		'id' => 'first-footer-widget-area',
+		'description' => __( 'The first footer widget area', 'icyf' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+) );
+
+// Second Footer Widget Area, located in the footer. Empty by default.
+register_sidebar( array(
+		'name' => __( 'Second Footer Widget Area', 'icyf' ),
+		'id' => 'second-footer-widget-area',
+		'description' => __( 'The second footer widget area', 'icyf' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+) );
+
 }
 add_action( 'widgets_init', 'icyf_widgets_init' );
 
@@ -133,7 +155,7 @@ add_action( 'widgets_init', 'icyf_widgets_init' );
  */
 function icyf_scripts() {
     // Enqueue Google Fonts:  Pacifico and PT Sans
-    wp_enqueue_style( 'icyf-fonts', 'https://fonts.googleapis.com/css?family=Oxygen:300,400,700|Pacifico');
+    wp_enqueue_style( 'icyf-fonts', 'https://fonts.googleapis.com/css?family=Oxygen:300,400,700|Pacifico|Playfair+Display:700');
 	wp_enqueue_style( 'icyf-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'icyf-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );

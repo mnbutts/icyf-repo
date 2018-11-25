@@ -3,7 +3,7 @@
   display: inline-block !important;
   float: left;
   margin-left: 4%;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   border: 1px solid $color__black;
   color: $color__blue;
   background-color: $color__white;
@@ -11,14 +11,17 @@
     font-size: 30px;
   }
 }
-.card-title a,
-.card-title a:visited {
+h5.card-title a,
+h5.card-title a:visited {
   color: $color__blue;
 }
 .rescuebtn {
   background-color: $color__blue;
+  border: none;
 }
-
+.card-body a:visited {
+  color: $color__white;
+}
 @media screen and (max-width: $query__large) {
   .card {
     margin-left: 9.2%;
